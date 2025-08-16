@@ -6,7 +6,8 @@
 
 ## 🎬 As Seen In
 
-This project appeared in my YouTube video: - COMING SOON
+This project appeared in my YouTube video:
+[![I Made an AI Textbot for Internet Over SMS](https://img.youtube.com/vi/HhgXPrvGvfA/hqdefault.jpg)](https://www.youtube.com/watch?v=HhgXPrvGvfA)
 
 And yes, it’s also on Instructables - COMING SOON
 
