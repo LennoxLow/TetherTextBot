@@ -1,89 +1,112 @@
-# **TETHER The ESP32 ChatGPT TextBot**
+# TETHER 📱🤖
 
-*“Using AI as your overkill, but hilarious, SMS Assistant.”*
-
----
-
-## About This Madness
-
-Ever wondered what it’s like to interrogate ChatGPT from your ancient flip phone? 
-Me neither, I was just sick of using data to look up random facts on hikes.
-but here we are.
-
-This project:
-- Receives SMS messages via a GSM module.
-- Forwards them to ChatGPT over Wi‑Fi.
-- Attempts to trim the AI’s response to 160 characters—because SMS hates you.
-- Sends the reply right back to your phone via SMS.
-- **Remembers conversations per number** for 5 minutes (then ghosts you).
-- Has **OTA updates** so your sealed-in-a-box device stays updatable.
+*"Using AI as your overkill, but hilarious SMS assistant."*
 
 ---
 
-## What You’ll Need
+## 🎬 As Seen In
 
-- **ESP32** — way more brainpower than necessary, but allows for improvements.
-- **A7670SA GSM module** — This may vary based on your region.
-- **SIM card with credit** — can’t SMS with good vibes only.
-- **5 V power source** - power decoys are cheap and easy.
-- **Wi‑Fi access** — because ChatGPT doesn’t answer via Morse code.
-- **Arduino IDE** — where your code comes alive.
+This project appeared in my YouTube video: - COMING SOON
+
+And yes, it’s also on Instructables - COMING SOON
 
 ---
 
-## Wiring Diagram (MS Paint-Ready)
+## ⚠️ What Is This?
 
-```
+Ever wondered what it’s like to interrogate ChatGPT from your **ancient flip phone**?
+Me neither. 
+But I was sick of using data to Google “how tall is Shrek” while on hikes, 
+so… here we are.
 
-```
+
+## 🧠 Features
+
+* SMS in → ChatGPT → SMS out.
+* Auto-trims responses to 160 characters.
+* Multi User Support.
+* Keeps a short-term memory per sender.
+* OTA updates.
+* SIMPLE.
 
 ---
 
-## How It Works (Barely)
+## 🧰 Parts List
 
-1. SMS arrives.
-2. ESP32 reads sender number and message.
-3. chaperones the message to ChatGPT.
-4. Gets an answer, chops it at 160 chars, texts it back to you.
-5. Deletes the SMS so the cycle doesn’t loop into oblivion.
-6. Keeps context per sender for 5 minutes before wiping memory. Simple but effective.
+| Part                 | Notes                                         |
+| -------------------- | --------------------------------------------- |
+| ESP32 (any flavor)   | brain of the operation                        |
+| A7670SA GSM Module   | Your SMS pigeon, may vary by region           |
+| SIM Card with credit | Free SIMs don’t exist                         |
+| 5 V Power Source     | Power bank + decoy works well                 |
+| Wi-Fi Network        | Hopefully you have this in your home          |
+| Arduino IDE          | Where the magic (and tears) happen            |
 
 ---
 
-## OTA Magic
+## 🗺️ Wiring Diagram
 
-You don’t need to crack open the box again as the OS updates itself over Wi‑Fi:
+THE WORLDS BEST DIAGRAM
+![Layout](./MSPaint.png)
+---
+
+## 🧪 How It Works (Barely)
+
+1. Phone sends SMS.
+2. GSM module hands it to ESP32.
+3. ESP32 sends it off to ChatGPT.
+4. ChatGPT responds with an essay (ugh).
+5. ESP32 chops it down to 160 chars.
+6. Sends back your AI fortune-cookie reply.
+7. Conversation memory lives for 5 minutes, then it forgets you like an ex.
+
+---
+
+## 💾 OTA Updates
+
+Yes, you can update this sealed chaos brick over Wi-Fi. No screwdriver required.
 
 ```cpp
 ArduinoOTA.begin();
-// in loop:
+// inside loop:
 ArduinoOTA.handle();
 ```
 
-Silent firmware ninja-updates.
+Evolves inside of its sealed container - Like a Pokemon!
 
 ---
 
-## Future Shenanigans
+## 🚀 Future Shenanigans
 
-- Make it send passive-aggressive responses if your grammar sucks.
-- Add voice calls so it reads replies like a robo-pal.
-- Include admin commands—text “RESET” and it flips the script.
-- Maybe even get it to send daily quests!
-
----
-
-## Want to Use It?
-
-1. Clone this madness.
-2. Install dependencies (`ArduinoJson`, `ArduinoOTA`).
-3. Set your Wi-Fi & API key in `Config.h`.
-4. Upload via serial (first time only).
-5. Seal it in a box and forget it.
-6. Get a text 12 years later asking why you forgot about it.
+* Add passive grammar checks/ critiques.
+* Voice calls where TETHER just sighs in your ear.
+* Admin commands (text it “RESET”).
+* Daily quests delivered by SMS (“Say Hi to a stranger”).
 
 ---
 
-### TL;DR
+## 🧩 Setup Instructions
 
-Texting you can add to your projects, the assistant is secondary.
+1. Clone this repo.
+2. Install libraries: `ArduinoJson`, `ArduinoOTA`.
+3. Put your Wi-Fi SSID + API key in `Config.h`.
+4. Flash the ESP32 once over USB.
+5. Hot-glue the thing shut.
+6. Forget about it.
+7. Receive an SMS in 2037 from tether asking to be freed.
+
+---
+
+## 📦 Dependencies
+
+* `ArduinoJson`
+* `ArduinoOTA`
+* `HTTPClient`
+* `WiFi.h`
+* Whatever flavor of GSM library fits your module
+
+---
+
+## 🖤 License
+
+Do whatever. Attribute me if you want. Just don’t call me when it starts texting you at 3 AM.
