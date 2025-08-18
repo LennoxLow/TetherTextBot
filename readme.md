@@ -105,6 +105,7 @@ Evolves inside of its sealed container - Like a Pokemon!
 * `HTTPClient`
 * `WiFi.h`
 * Whatever flavor of GSM library fits your module
+* You will need to place your OpenAI and WIFI credentials at the top of the INO
 
 ---
 
